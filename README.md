@@ -1,3 +1,20 @@
+export PYTHONPATH=/home/lh/Desktop/video_analyst/:$PYTHONPATH  
+
+CUDA_VISIBLE_DEVICES=3
+
+python3 ./demo/main/video/sot_video.py --config 'experiments/siamfcpp/test/vot/siamfcpp_googlenet.yaml' --device cuda --video /data/lh/pysot/demo/0x03.mp4 --output demo/main/ouputs/result.mp4
+
+
+python ./tools/siamfcpp/test/delete_json_node.py
+
+
+python ./tools/siamfcpp/test/visual_vot.py
+
+
+CUDA_VISIBLE_DEVICES=3 python3 ./main/test.py --config 'experiments/siamfcpp/test/vot/siamfcpp_alexnet.yaml'
+python3 ./main/test.py --config 'experiments/siamfcpp/test/vot/siamfcpp_googlenet.yaml'
+
+
 # Video Analyst
 
 [![Build Status](https://travis-ci.org/MegviiDetection/video_analyst.svg?branch=master)](https://travis-ci.org/MegviiDetection/video_analyst)

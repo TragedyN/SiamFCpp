@@ -21,7 +21,7 @@ test:
       task_model:
         name: "SiamTrack"
         SiamTrack:
-          pretrain_model_path: "models/siamfcpp/siamfcpp-googlenet-vot-md5_f2680ba074213ee39d82fcb84533a1a6.pkl"
+          pretrain_model_path: "models/siamfcpp/siamfcpp-googlenet_bn-vot-md5_d63a5e59d5f0e7358aa7888af1b43242.pkl"
           trt_mode: False
           trt_fea_model_path: "models/siamfcpp/siamfcpp-googlenet-vot-fea-md5_eef319.trt"
           trt_track_model_path: "models/siamfcpp/siamfcpp-googlenet-vot-track-fea-md5_700273.trt"
@@ -39,4 +39,4 @@ test:
         exp_name: *TEST_NAME
         exp_save: *TEST_SAVE
         device_num: 1
-        dataset_names: ["VOT2018"]
+        dataset_names: ["VOT2019_hm"]
